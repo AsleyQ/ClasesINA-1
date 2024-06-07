@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,12 +38,37 @@ namespace ClasesINA.Formularios
         {
             Crea_Cuentas NuevaCuenta = new Crea_Cuentas(); // Instancia para llamar al botón Crea_Cuentas
             NuevaCuenta.Show();
+           
         }
 
         private void Login_Activated(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(Crea_Cuentas.usuario)){
                 txtUsuario.Text = Crea_Cuentas.usuario;
+            }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            string usuarioAutentica = txtUsuario.Text;
+            string passwdAutentica = txtContrasenniaL.Text;
+
+            bool existeUsuario = Array.Exists(usuario, filtro => filtro == usuarioAutentica);
+            bool existePasswd = Array.Exists(contrasennia,filtro => filtro == passwdAutentica);
+
+            if (existePasswd && existeUsuario) {
+                Principal principal = new Principal();
+                principal.Show();
+                Visible = false; //Ocultar la ventana
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Usuario y/o contraseña no coinciden"
+                    "Error de acceso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
             }
         }
     }
