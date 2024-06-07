@@ -29,46 +29,59 @@
         private void InitializeComponent()
         {
             this.lblValorConstante = new System.Windows.Forms.Label();
-            this.btnImprimirConstante = new System.Windows.Forms.Button();
+            this.btnImprimirConstante = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // lblValorConstante
             // 
             this.lblValorConstante.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblValorConstante.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblValorConstante.Location = new System.Drawing.Point(65, 88);
+            this.lblValorConstante.Location = new System.Drawing.Point(33, 179);
+            this.lblValorConstante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorConstante.Name = "lblValorConstante";
-            this.lblValorConstante.Size = new System.Drawing.Size(370, 56);
+            this.lblValorConstante.Size = new System.Drawing.Size(247, 36);
             this.lblValorConstante.TabIndex = 0;
             this.lblValorConstante.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnImprimirConstante
             // 
-            this.btnImprimirConstante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimirConstante.Location = new System.Drawing.Point(65, 12);
+            this.btnImprimirConstante.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnImprimirConstante.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnImprimirConstante.Depth = 0;
+            this.btnImprimirConstante.HighEmphasis = true;
+            this.btnImprimirConstante.Icon = null;
+            this.btnImprimirConstante.Location = new System.Drawing.Point(33, 120);
+            this.btnImprimirConstante.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnImprimirConstante.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnImprimirConstante.Name = "btnImprimirConstante";
-            this.btnImprimirConstante.Size = new System.Drawing.Size(370, 62);
-            this.btnImprimirConstante.TabIndex = 1;
+            this.btnImprimirConstante.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnImprimirConstante.Size = new System.Drawing.Size(273, 36);
+            this.btnImprimirConstante.TabIndex = 2;
             this.btnImprimirConstante.Text = "Mostrar valor de la constante";
+            this.btnImprimirConstante.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnImprimirConstante.UseAccentColor = false;
             this.btnImprimirConstante.UseVisualStyleBackColor = true;
-            this.btnImprimirConstante.Click += new System.EventHandler(this.btnImprimirConstante_Click);
+            this.btnImprimirConstante.Click += new System.EventHandler(this.btnImprimirConstante_Click_1);
             // 
             // Constantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.btnImprimirConstante);
             this.Controls.Add(this.lblValorConstante);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Constantes";
+            this.Padding = new System.Windows.Forms.Padding(2, 42, 2, 2);
             this.Text = "Constantes";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label lblValorConstante;
-        private System.Windows.Forms.Button btnImprimirConstante;
+        private MaterialSkin.Controls.MaterialButton btnImprimirConstante;
     }
 }

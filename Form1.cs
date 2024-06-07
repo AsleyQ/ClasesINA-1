@@ -1,4 +1,6 @@
 ﻿using ClasesINA.Formularios;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +13,24 @@ using System.Windows.Forms;
 
 namespace ClasesINA
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MaterialForm
     {
         public Form1()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+
+            //Acá vamos a configurar el color 
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                 Primary.Blue500, Primary.Blue700,
+                 Primary.Blue500, Accent.Indigo200,
+                 TextShade.WHITE
+                );
+
+               
+
         }
 
         private void button1_Click(object sender, EventArgs e)

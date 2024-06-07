@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ClasesINA.Formularios
 {
-    public partial class Constantes : Form
+    public partial class Constantes : MaterialForm
     {
         //VALORES CONSTANTES
         const double PI = 3.14;
@@ -21,7 +22,9 @@ namespace ClasesINA.Formularios
             InitializeComponent();
         }
 
-        private void btnImprimirConstante_Click(object sender, EventArgs e)
+
+
+        private void btnImprimirConstante_Click_1(object sender, EventArgs e)
         {
             lblValorConstante.Text = "" + PI;
         }
