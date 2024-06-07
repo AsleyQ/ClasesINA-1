@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.txtProducto = new MaterialSkin.Controls.MaterialTextBox2();
-            this.txtPrecio = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialSlider1 = new MaterialSkin.Controls.MaterialSlider();
+            this.txtPrecioUnitario = new MaterialSkin.Controls.MaterialTextBox2();
+            this.slideUnidades = new MaterialSkin.Controls.MaterialSlider();
             this.btnProcesarCompra = new MaterialSkin.Controls.MaterialButton();
             this.txtTotal = new MaterialSkin.Controls.MaterialTextBox2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -72,45 +72,47 @@
             this.txtProducto.TrailingIcon = null;
             this.txtProducto.UseSystemPasswordChar = false;
             // 
-            // txtPrecio
+            // txtPrecioUnitario
             // 
-            this.txtPrecio.AnimateReadOnly = false;
-            this.txtPrecio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtPrecio.Depth = 0;
-            this.txtPrecio.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtPrecio.HideSelection = true;
-            this.txtPrecio.Hint = "Precio Unitario";
-            this.txtPrecio.LeadingIcon = null;
-            this.txtPrecio.Location = new System.Drawing.Point(283, 124);
-            this.txtPrecio.MaxLength = 32767;
-            this.txtPrecio.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.PasswordChar = '\0';
-            this.txtPrecio.PrefixSuffixText = null;
-            this.txtPrecio.ReadOnly = false;
-            this.txtPrecio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPrecio.SelectedText = "";
-            this.txtPrecio.SelectionLength = 0;
-            this.txtPrecio.SelectionStart = 0;
-            this.txtPrecio.ShortcutsEnabled = true;
-            this.txtPrecio.Size = new System.Drawing.Size(157, 48);
-            this.txtPrecio.TabIndex = 1;
-            this.txtPrecio.TabStop = false;
-            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPrecio.TrailingIcon = null;
-            this.txtPrecio.UseSystemPasswordChar = false;
+            this.txtPrecioUnitario.AnimateReadOnly = false;
+            this.txtPrecioUnitario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtPrecioUnitario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtPrecioUnitario.Depth = 0;
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPrecioUnitario.HideSelection = true;
+            this.txtPrecioUnitario.Hint = "Precio Unitario";
+            this.txtPrecioUnitario.LeadingIcon = null;
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(283, 124);
+            this.txtPrecioUnitario.MaxLength = 32767;
+            this.txtPrecioUnitario.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.PasswordChar = '\0';
+            this.txtPrecioUnitario.PrefixSuffixText = null;
+            this.txtPrecioUnitario.ReadOnly = false;
+            this.txtPrecioUnitario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPrecioUnitario.SelectedText = "";
+            this.txtPrecioUnitario.SelectionLength = 0;
+            this.txtPrecioUnitario.SelectionStart = 0;
+            this.txtPrecioUnitario.ShortcutsEnabled = true;
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(157, 48);
+            this.txtPrecioUnitario.TabIndex = 1;
+            this.txtPrecioUnitario.TabStop = false;
+            this.txtPrecioUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPrecioUnitario.TrailingIcon = null;
+            this.txtPrecioUnitario.UseSystemPasswordChar = false;
+            this.txtPrecioUnitario.Leave += new System.EventHandler(this.txtPrecioUnitario_Leave);
             // 
-            // materialSlider1
+            // slideUnidades
             // 
-            this.materialSlider1.Depth = 0;
-            this.materialSlider1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialSlider1.Location = new System.Drawing.Point(494, 124);
-            this.materialSlider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSlider1.Name = "materialSlider1";
-            this.materialSlider1.Size = new System.Drawing.Size(250, 40);
-            this.materialSlider1.TabIndex = 2;
-            this.materialSlider1.Text = "Unidades";
+            this.slideUnidades.Depth = 0;
+            this.slideUnidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.slideUnidades.Location = new System.Drawing.Point(494, 124);
+            this.slideUnidades.MouseState = MaterialSkin.MouseState.HOVER;
+            this.slideUnidades.Name = "slideUnidades";
+            this.slideUnidades.Size = new System.Drawing.Size(250, 40);
+            this.slideUnidades.TabIndex = 2;
+            this.slideUnidades.Text = "Unidades";
+            this.slideUnidades.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.slideUnidades_onValueChanged);
             // 
             // btnProcesarCompra
             // 
@@ -130,6 +132,7 @@
             this.btnProcesarCompra.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnProcesarCompra.UseAccentColor = false;
             this.btnProcesarCompra.UseVisualStyleBackColor = true;
+            this.btnProcesarCompra.Click += new System.EventHandler(this.btnProcesarCompra_Click);
             // 
             // txtTotal
             // 
@@ -242,8 +245,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.btnProcesarCompra);
-            this.Controls.Add(this.materialSlider1);
-            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.slideUnidades);
+            this.Controls.Add(this.txtPrecioUnitario);
             this.Controls.Add(this.txtProducto);
             this.Name = "Principal";
             this.Text = "Principal";
@@ -257,8 +260,8 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialTextBox2 txtProducto;
-        private MaterialSkin.Controls.MaterialTextBox2 txtPrecio;
-        private MaterialSkin.Controls.MaterialSlider materialSlider1;
+        private MaterialSkin.Controls.MaterialTextBox2 txtPrecioUnitario;
+        private MaterialSkin.Controls.MaterialSlider slideUnidades;
         private MaterialSkin.Controls.MaterialButton btnProcesarCompra;
         private MaterialSkin.Controls.MaterialTextBox2 txtTotal;
         private System.Windows.Forms.DataGridView dataGridView1;

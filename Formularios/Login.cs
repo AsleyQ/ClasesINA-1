@@ -64,7 +64,7 @@ namespace ClasesINA.Formularios
             else
             {
                 MessageBox.Show(
-                    "Usuario y/o contraseña no coinciden"
+                    "Usuario y/o contraseña no coinciden",
                     "Error de acceso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
