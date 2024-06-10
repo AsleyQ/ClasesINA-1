@@ -93,6 +93,26 @@ namespace ClasesINA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cuentas_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cuentas-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_facturación_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-facturación-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_engine_optimization {
             get {
                 object obj = ResourceManager.GetObject("search-engine-optimization", resourceCulture);

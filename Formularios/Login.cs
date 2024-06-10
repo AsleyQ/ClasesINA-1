@@ -57,7 +57,7 @@ namespace ClasesINA.Formularios
             bool existePasswd = Array.Exists(contrasennia,filtro => filtro == passwdAutentica);
 
             if (existePasswd && existeUsuario) {
-                Principal principal = new Principal();
+                Principal2 principal = new Principal2();
                 principal.Show();
                 Visible = false; //Ocultar la ventana
             }
