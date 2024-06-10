@@ -33,14 +33,14 @@
             this.slideUnidades = new MaterialSkin.Controls.MaterialSlider();
             this.btnProcesarCompra = new MaterialSkin.Controls.MaterialButton();
             this.txtTotal = new MaterialSkin.Controls.MaterialTextBox2();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
-            this.btnActualizar = new MaterialSkin.Controls.MaterialButton();
+            this.dtCompras = new System.Windows.Forms.DataGridView();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadesCompradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
+            this.btnActualizar = new MaterialSkin.Controls.MaterialButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dtCompras)).BeginInit();
             this.SuspendLayout();
             // 
             // txtProducto
@@ -49,7 +49,7 @@
             this.txtProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtProducto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtProducto.Depth = 0;
-            this.txtProducto.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtProducto.HideSelection = true;
             this.txtProducto.Hint = "Nombre del producto";
             this.txtProducto.LeadingIcon = null;
@@ -78,7 +78,7 @@
             this.txtPrecioUnitario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtPrecioUnitario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtPrecioUnitario.Depth = 0;
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPrecioUnitario.HideSelection = true;
             this.txtPrecioUnitario.Hint = "Precio Unitario";
             this.txtPrecioUnitario.LeadingIcon = null;
@@ -163,19 +163,39 @@
             this.txtTotal.TrailingIcon = null;
             this.txtTotal.UseSystemPasswordChar = false;
             // 
-            // dataGridView1
+            // dtCompras
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtCompras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreProducto,
             this.PrecioUnitario,
             this.UnidadesCompradas,
             this.Total});
-            this.dataGridView1.Location = new System.Drawing.Point(49, 308);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(519, 117);
-            this.dataGridView1.TabIndex = 5;
+            this.dtCompras.Location = new System.Drawing.Point(49, 308);
+            this.dtCompras.Name = "dtCompras";
+            this.dtCompras.Size = new System.Drawing.Size(519, 117);
+            this.dtCompras.TabIndex = 5;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre del Producto";
+            this.NombreProducto.Name = "NombreProducto";
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.HeaderText = "Precio Unitario";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            // 
+            // UnidadesCompradas
+            // 
+            this.UnidadesCompradas.HeaderText = "Unidades Compradas";
+            this.UnidadesCompradas.Name = "UnidadesCompradas";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
             // 
             // btnEliminar
             // 
@@ -208,32 +228,12 @@
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnActualizar.Size = new System.Drawing.Size(88, 36);
+            this.btnActualizar.Size = new System.Drawing.Size(109, 36);
             this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnActualizar.UseAccentColor = false;
             this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre del Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio Unitario";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            // 
-            // UnidadesCompradas
-            // 
-            this.UnidadesCompradas.HeaderText = "Unidades Compradas";
-            this.UnidadesCompradas.Name = "UnidadesCompradas";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
             // 
             // Principal
             // 
@@ -242,7 +242,7 @@
             this.ClientSize = new System.Drawing.Size(986, 450);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtCompras);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.btnProcesarCompra);
             this.Controls.Add(this.slideUnidades);
@@ -251,7 +251,7 @@
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,7 +264,7 @@
         private MaterialSkin.Controls.MaterialSlider slideUnidades;
         private MaterialSkin.Controls.MaterialButton btnProcesarCompra;
         private MaterialSkin.Controls.MaterialTextBox2 txtTotal;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtCompras;
         private MaterialSkin.Controls.MaterialButton btnEliminar;
         private MaterialSkin.Controls.MaterialButton btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
