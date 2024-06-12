@@ -46,20 +46,21 @@
             this.materialCard1.Controls.Add(this.txtUsuario);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(221, 131);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Location = new System.Drawing.Point(295, 161);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(390, 244);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(19, 17, 19, 17);
+            this.materialCard1.Size = new System.Drawing.Size(520, 300);
             this.materialCard1.TabIndex = 0;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(279, 211);
+            this.linkLabel1.Location = new System.Drawing.Point(372, 260);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(85, 16);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Crear Cuenta";
@@ -73,8 +74,8 @@
             this.btnIngresar.Depth = 0;
             this.btnIngresar.HighEmphasis = true;
             this.btnIngresar.Icon = null;
-            this.btnIngresar.Location = new System.Drawing.Point(257, 169);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnIngresar.Location = new System.Drawing.Point(343, 208);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnIngresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -101,7 +102,8 @@
             this.txtContrasenniaL.Hint = "Contraseña";
             this.txtContrasenniaL.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtContrasenniaL.LeadingIcon = null;
-            this.txtContrasenniaL.Location = new System.Drawing.Point(98, 112);
+            this.txtContrasenniaL.Location = new System.Drawing.Point(131, 138);
+            this.txtContrasenniaL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContrasenniaL.Mask = "";
             this.txtContrasenniaL.MaxLength = 32767;
             this.txtContrasenniaL.MouseState = MaterialSkin.MouseState.OUT;
@@ -118,7 +120,7 @@
             this.txtContrasenniaL.SelectionLength = 0;
             this.txtContrasenniaL.SelectionStart = 0;
             this.txtContrasenniaL.ShortcutsEnabled = true;
-            this.txtContrasenniaL.Size = new System.Drawing.Size(250, 48);
+            this.txtContrasenniaL.Size = new System.Drawing.Size(333, 48);
             this.txtContrasenniaL.SkipLiterals = true;
             this.txtContrasenniaL.TabIndex = 2;
             this.txtContrasenniaL.TabStop = false;
@@ -138,7 +140,8 @@
             this.txtUsuario.HideSelection = true;
             this.txtUsuario.Hint = "Ingrese el usuario";
             this.txtUsuario.LeadingIcon = null;
-            this.txtUsuario.Location = new System.Drawing.Point(98, 42);
+            this.txtUsuario.Location = new System.Drawing.Point(131, 52);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.MaxLength = 32767;
             this.txtUsuario.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUsuario.Name = "txtUsuario";
@@ -150,7 +153,7 @@
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
             this.txtUsuario.ShortcutsEnabled = true;
-            this.txtUsuario.Size = new System.Drawing.Size(250, 48);
+            this.txtUsuario.Size = new System.Drawing.Size(333, 48);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TabStop = false;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -162,7 +165,8 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(221, 85);
+            this.materialLabel1.Location = new System.Drawing.Point(295, 105);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(213, 19);
@@ -171,12 +175,14 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialCard1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
+            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Login";
             this.Activated += new System.EventHandler(this.Login_Activated);
             this.materialCard1.ResumeLayout(false);

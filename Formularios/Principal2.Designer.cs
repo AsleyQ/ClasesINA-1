@@ -30,25 +30,26 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturarConListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearCuentaDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formularioDeListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.facturarConListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearCuentaDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facturaciónToolStripMenuItem,
             this.cuentasToolStripMenuItem,
             this.listasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,47 +59,8 @@
             this.facturarProductosToolStripMenuItem,
             this.facturarConListasToolStripMenuItem});
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
-            // 
-            // cuentasToolStripMenuItem
-            // 
-            this.cuentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearCuentaDeUsuarioToolStripMenuItem});
-            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.cuentasToolStripMenuItem.Text = "Cuentas";
-            // 
-            // listasToolStripMenuItem
-            // 
-            this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formularioDeListasToolStripMenuItem});
-            this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
-            this.listasToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.listasToolStripMenuItem.Text = "Listas";
-            // 
-            // formularioDeListasToolStripMenuItem
-            // 
-            this.formularioDeListasToolStripMenuItem.Name = "formularioDeListasToolStripMenuItem";
-            this.formularioDeListasToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.formularioDeListasToolStripMenuItem.Text = "Formulario de listas";
-            this.formularioDeListasToolStripMenuItem.Click += new System.EventHandler(this.formularioDeListasToolStripMenuItem_Click);
-            // 
-            // Contenedor
-            // 
-            this.Contenedor.AutoSize = true;
-            this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contenedor.Location = new System.Drawing.Point(0, 24);
-            this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(800, 426);
-            this.Contenedor.TabIndex = 1;
-            // 
-            // facturarConListasToolStripMenuItem
-            // 
-            this.facturarConListasToolStripMenuItem.Name = "facturarConListasToolStripMenuItem";
-            this.facturarConListasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.facturarConListasToolStripMenuItem.Text = "Facturar con listas";
-            this.facturarConListasToolStripMenuItem.Click += new System.EventHandler(this.facturarConListasToolStripMenuItem_Click);
             // 
             // facturarProductosToolStripMenuItem
             // 
@@ -106,10 +68,25 @@
             this.facturarProductosToolStripMenuItem.Name = "facturarProductosToolStripMenuItem";
             this.facturarProductosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.facturarProductosToolStripMenuItem.ShowShortcutKeys = false;
-            this.facturarProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturarProductosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.facturarProductosToolStripMenuItem.Text = "Facturar productos";
             this.facturarProductosToolStripMenuItem.ToolTipText = "Esta es una vista para realizar la facturación de productos";
             this.facturarProductosToolStripMenuItem.Click += new System.EventHandler(this.facturarProductosToolStripMenuItem_Click);
+            // 
+            // facturarConListasToolStripMenuItem
+            // 
+            this.facturarConListasToolStripMenuItem.Name = "facturarConListasToolStripMenuItem";
+            this.facturarConListasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.facturarConListasToolStripMenuItem.Text = "Facturar con listas";
+            this.facturarConListasToolStripMenuItem.Click += new System.EventHandler(this.facturarConListasToolStripMenuItem_Click);
+            // 
+            // cuentasToolStripMenuItem
+            // 
+            this.cuentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearCuentaDeUsuarioToolStripMenuItem});
+            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
+            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.cuentasToolStripMenuItem.Text = "Cuentas";
             // 
             // crearCuentaDeUsuarioToolStripMenuItem
             // 
@@ -117,18 +94,44 @@
             this.crearCuentaDeUsuarioToolStripMenuItem.Name = "crearCuentaDeUsuarioToolStripMenuItem";
             this.crearCuentaDeUsuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.crearCuentaDeUsuarioToolStripMenuItem.ShowShortcutKeys = false;
-            this.crearCuentaDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.crearCuentaDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.crearCuentaDeUsuarioToolStripMenuItem.Text = "Crear cuenta de usuario";
             this.crearCuentaDeUsuarioToolStripMenuItem.ToolTipText = "Esta es una vista para crear una nueva cuenta de usuario ";
             this.crearCuentaDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearCuentaDeUsuarioToolStripMenuItem_Click);
             // 
+            // listasToolStripMenuItem
+            // 
+            this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formularioDeListasToolStripMenuItem});
+            this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
+            this.listasToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.listasToolStripMenuItem.Text = "Listas";
+            // 
+            // formularioDeListasToolStripMenuItem
+            // 
+            this.formularioDeListasToolStripMenuItem.Name = "formularioDeListasToolStripMenuItem";
+            this.formularioDeListasToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.formularioDeListasToolStripMenuItem.Text = "Formulario de listas";
+            this.formularioDeListasToolStripMenuItem.Click += new System.EventHandler(this.formularioDeListasToolStripMenuItem_Click);
+            // 
+            // Contenedor
+            // 
+            this.Contenedor.AutoSize = true;
+            this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Contenedor.Location = new System.Drawing.Point(0, 30);
+            this.Contenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Contenedor.Name = "Contenedor";
+            this.Contenedor.Size = new System.Drawing.Size(1067, 524);
+            this.Contenedor.TabIndex = 1;
+            // 
             // Principal2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Principal2";
             this.Text = "Principal2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal2_FormClosed);

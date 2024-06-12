@@ -16,8 +16,9 @@ namespace ClasesINA.Formularios
     {
         string[] Vproductos = { }; //declaramos el vector para productos (que esté vacío)  (V de vector)
         int[] VUnidadesCompradas = { }; //vector para unidades compradas
-        double[] VprecioUnitario = { }; //vector para el total generado por la línea de compra 
-        double[]Vtotal = { };
+        double[] VprecioUnitario = { }; //vector para el precio unitario
+        double[]Vtotal = { };//vector para el total generado por la línea de compra
+        
         public Principal()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace ClasesINA.Formularios
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtPrecioUnitario_Leave(object sender, EventArgs e)

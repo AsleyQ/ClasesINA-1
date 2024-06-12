@@ -182,6 +182,7 @@
             this.dtComprasP3.RowHeadersWidth = 51;
             this.dtComprasP3.Size = new System.Drawing.Size(692, 162);
             this.dtComprasP3.TabIndex = 7;
+            this.dtComprasP3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtComprasP3_CellClick);
             this.dtComprasP3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtComprasP3_CellContentClick);
             // 
             // NombreProducto

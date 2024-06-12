@@ -113,7 +113,7 @@ namespace ClasesINA.Formularios
         }
 
         
-    }// Finaliza la clase
+    }// Finaliza la clase.
 
 }
 

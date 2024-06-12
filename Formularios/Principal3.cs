@@ -204,7 +204,9 @@ namespace ClasesINA.Formularios
             return LProductos.Contains(nombreProducto);
         }
 
-        private void dtComprasP3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+
+        private void dtComprasP3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Console.WriteLine(dtComprasP3.Rows.Count);
             //Aqui obtenemos toda la fila (con todos sus encabezados)
@@ -223,6 +225,9 @@ namespace ClasesINA.Formularios
             Console.WriteLine(nombreProductoEliminar);
         }
 
-        
+        private void dtComprasP3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
